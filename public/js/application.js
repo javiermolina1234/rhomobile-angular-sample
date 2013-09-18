@@ -46,7 +46,7 @@
 				this.products.push(hash);
 				return hash;
 			},
-			delete: function(product_id) {
+			del: function(product_id) {
 				var rhoProduct = this.find_by_id(product_id);
 				if (rhoProduct) {
 					// remove the product from the database
@@ -104,8 +104,8 @@
 				ProductHelper.create({name: "New product"});
 			}
 
-			$scope.delete = function(product_id) {
-				ProductHelper.delete(product_id);
+			$scope.del = function(product_id) {
+				ProductHelper.del(product_id);
 			}
 
 			$scope.sync = function() {
